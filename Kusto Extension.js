@@ -2,16 +2,24 @@
 // @name         Kusto Extension
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @description  Kusto Extension
+// @author       Yuzhe Zhou
 // @match        https://ailoganalyticsportal-privatecluster.cloudapp.net/
 // @grant        none
 // @require http://code.jquery.com/jquery-3.3.1.min.js
 // ==/UserScript==
 
+/*(function() {
+    'use strict';
+    console.log("Running Kusto Extension");
+
+    // Your code here...
+})();*/
+
 let markIDSet = new Set();
 
 function addDblclick() {
+    console.log('Add double click listener');
     $("tbody").on("dblclick", "tr", function () {
         let uid = this.getAttribute("data-uid");
         if (markIDSet.has(uid)) {
@@ -57,7 +65,9 @@ async function addButton() {
 
 (function () {
     'use strict';
+    console.log("Running Kusto Extension");
     $(document).ready(function () {
+        console.log("Document is ready");
         addButton();
     });
 })();
