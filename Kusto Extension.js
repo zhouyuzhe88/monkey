@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Kusto Extension
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/zhouyuzhe88/monkey/blob/master/Kusto%20Extension.js
 // @version      0.1
 // @description  Kusto Extension
 // @author       Yuzhe Zhou
